@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro - Barber B.A</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-body">
+  <div class="auth-container">
+    <div class="auth-box">
+      <h1>Crear Cuenta</h1>
+
+      <form id="registroForm">
+        <label for="nombre">Nombre Completo</label>
+        <input id="nombre" type="text" placeholder="Ingrese su nombre" required>
+
+        <label for="email">Correo Electrónico</label>
+        <input id="email" type="email" placeholder="tinchovaldes@gmail.com" required>
+
+        <label for="contraseña">Contraseña</label>
+        <input id="contraseña" type="password" placeholder="*******" required>
+
+        <label class="checkbox">
+          <input type="checkbox" id="terminos" required>
+          Acepto los <a href="#">términos y condiciones</a>
+        </label>
+
+        <button type="submit" class="btn-form">Registrarse</button>
+        <p class="form-text">¿Ya tenés cuenta? <a href="iniciosesion.html">Iniciá sesión acá</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("registroForm").addEventListener("submit", e => {
+      e.preventDefault();
+
+      const nuevoUsuario = {
+        nombre: document.getElementById("nombre").value.trim(),
+        email: document.getElementById("email").value.trim(),
+        contraseña: document.getElementById("contraseña").value.trim()
+      };
+
+      // Obtener usuarios existentes
+      const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+      // Verificar si el correo ya está registrado
+      const existe = usuarios.some(u => u.email === nuevoUsuario.email);
+      if (existe) {
+        alert("Ese correo ya está registrado.");
+        return;
+      }
+
+      // Guardar nuevo usuario
+      usuarios.push(nuevoUsuario);
+      localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+      alert("Cuenta creada con éxito. ¡Ahora podés iniciar sesión!");
+      window.location.href = "iniciosesion.html";
+    });
+  </script>
+</body>
+</html>
+🔧 iniciosesion.html (corregido)
+html
+Copiar código
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Iniciar Sesión - Barber B.A</title>
+  <link rel="icon" href="img/Logo.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-body">
+  <div class="auth-container">
+    <div class="auth-box">
+      <h1>Iniciar Sesión</h1>
+
+      <form id="loginForm">
+        <label for="email">Correo Electrónico</label>
+        <input id="email" type="email" placeholder="tinchovaldes@gmail.com" required>
+
+        <label for="contraseña">Contraseña</label>
+        <input id="contraseña" type="password" placeholder="*******" required>
+
+        <button type="submit" class="btn-form">Ingresar</button>
+      </form>
+
+      <p id="mensajeError" style="color:red; margin-top:10px;"></p>
+      <p class="form-text">¿No tenés cuenta? <a href="registro.html">Registrate acá</a></p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", e => {
+      e.preventDefault();
+
+      const email = document.getElementById("email").value.trim();
+      const contraseña = document.getElementById("contraseña").value.trim();
+      const mensajeError = document.getElementById("mensajeError");
+
+      const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+      const encontrado = usuarios.find(u => u.email === email && u.contraseña === contraseña);
+
+      if (encontrado) {
+        localStorage.setItem("usuarioLogeado", encontrado.nombre);
+        alert(`Bienvenido ${encontrado.nombre}!`);
+        window.location.href = "index.html";
+      } else {
+        mensajeError.textContent = "Correo o contraseña incorrectos.";
+      }
+    });
+  </script>
+</body>
+</html>
