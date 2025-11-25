@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Links -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+<!-- LOGO Y TITULO-->
+    <title>Barber B.A</title>
+    <link rel="icon" href="img/Logo.png">
+
+</head>
+<body>
+    <!-- NAVEGADOR -->
+    <header>
+        <h1>Barber B.A</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    <!-- CARRITO -->
+        <div class="carrito-container">
+            <span class="carrito-icono">🛒</span>
+            <span class="contador-carrito">0</span>
+
+            <div class="menu-carrito">
+                <h3>Tu carrito</h3>
+                <ul class="lista-carrito"></ul>
+                <p>Total: <span class="total-carrito">$0</span></p>
+                <button class="btn-pagar"> Pagar Ahora </button>
+            </div>
+
+        </div>
+
+        <div id="usuario-info"></div>
+        <button id="btnLogin" class="btn-login" onclick="window.location.href='iniciosesion.html'">IniciarSesion</button>
+
+    </header>
+
+    <main>
+    <!-- INICIO -->
+      <section id="inicio" class="inicio">
+  <div class="inicio-contenido">
+    <div class="texto-inicio">
+      <h2>Bienvenidos a <span>Barber B.A</span></h2>
+      <p>
+        Somos una tienda dedicada al estilo, la calidad y la pasión por el mundo de la barbería. 
+        En <strong>Barber B.A</strong> vas a encontrar los mejores productos profesionales para barberos, 
+        estilistas y amantes del cuidado personal masculino.
+      </p>
+      <ul class="beneficios">
+        <li>✂️ Productos 100% originales y de alta calidad</li>
+        <li>🧴 Insumos profesionales para tu barbería o uso personal</li>
+        <li>🚚 Envíos a todo el país</li>
+        <li>💳 Pagos seguros y atención personalizada</li>
+      </ul>
+      <a href="#productos" class="btn-explorar">Explorar Productos</a>
+    </div>
+
+    <div class="imagen-inicio">
+      <img src="img/banner.jpg" alt="Barbería profesional" />
+    </div>
+  </div>
+</section>
+    <!-- PRODUCTOS -->
+        <section id="productos" class="productos">
+            <article class="Producto">
+                <img src="img/Polvos y cera.png" alt="Cera">
+                <h2>Polvos y ceras</h2>
+                <p>$9500</p>
+                <a href="#" class="btn - btn-primary btn-agregar" data-id="1" data-nombre="Polvo"
+                data-precio="$9500" data-image="img/Polvos y cera.png">Agregar al carrito</a>
+            </article>
+             <article class="Producto">
+                <img src="img/aros de luz .png" alt="Aro de luz">
+                <h2>Aro de luz profesional</h2>
+                <p>$12000</p>
+                <a href="#" class="btn - btn-primary btn-agregar" data-id="2" data-nombre="Aro"
+                data-precio="$12000" data-image="img/aros de luz .png">Agregar al carrito</a>
+            </article>
+             <article class="Producto">
+                <img src="img/maquina de cortar pelo.png" alt="Maquina">
+                <h2>Maquina profesional</h2>
+                <p>$20000</p>
+                <a href="#" class="btn - btn-primary btn-agregar" data-id="3" data-nombre="Maquina"
+                data-precio="$20000" data-image="img/maquina de cortar pelo.png">Agregar al carrito</a>
+            </article>
+             <article class="Producto">
+                <img src="img/navaja + caja de filos.png" alt="Navaja">
+                <h2>Navaja + caja de filos</h2>
+                <p>$15000</p>
+                <a href="#" class="btn - btn-primary btn-agregar" data-id="4" data-nombre="Navaja"
+                data-precio="$15000" data-image="img/navaja + caja de filos.png">Agregar al carrito</a>
+            </article>
+             <article class="Producto">
+                <img src="img/shampus de tratamientos de pelo.png" alt="shampus">
+                <h2>shampus de tratamientos de pelo</h2>
+                <p>$35.000</p>
+                <a href="#" class="btn - btn-primary btn-agregar" data-id="5" data-nombre="Shampoo"
+                data-precio="$35000" data-image="img/shampus de tratamientos de pelo.png">Agregar al carrito</a>
+            </article>
+             <article class="Producto">
+                <img src="img/secadora de pelo + peinetas.png" alt="secadora">
+                <h2>secadora de pelo + peinetas</h2>
+                <p>$80.000</p>
+                <a href="#" class="btn - btn-primary btn-agregar" data-id="6" data-nombre="Secador de pelo"
+                data-precio="$80000" data-image="img/secadora de pelo + peinetas.png">Agregar al carrito</a>
+            </article>
+             <article class="Producto">
+                <img src="img/silla + capa.png" alt="sila y capa">
+                <h2>silla + capa de barberia estilo graffiti urbano</h2>
+                <p>$109.000</p>
+                <a href="#" class="btn - btn-primary btn-agregar" data-id="7" data-nombre="Silla"
+                data-precio="$109000" data-image="img/silla + capa.png">Agregar al carrito</a>
+            </article>
+             <article class="Producto">
+                <img src="img/tijera de cortal pelo.png" alt="tijera">
+                <h2>tijera de cortar pelo de color morado</h2>
+                <p>$9.000</p>s
+                <a href="#" class="btn - btn-primary btn-agregar" data-id="8" data-nombre="Tijera"
+                data-precio="$9000" data-image="img/tijera de cortal pelo.png">Agregar al carrito</a>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <section id="contacto">
+            <p>&copy; 2025 Barber B.A</p>
+            <h2>Contacto</h2>
+            <p>Seguinos en nuestras redes sociales</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/barberb.a" target="_blank" rel="noopener">
+                    <img src="img/facebook-icon.png" alt="Facebook" />
+                </a>
+                <a href="https://www.instagram.com/barberb.a" target="_blank" rel="noopener">
+                    <img src="img/instagram-icon.png" alt="Instagram" />
+                </a>
+                <a href="https://www.twitter.com/barberb.a" target="_blank" rel="noopener">
+                    <img src="img/twitter-icon.png" alt="Twitter" />
+                </a>
+            </div>
+        </section>
+    </footer>
+    <script src="js/carrito.js"></script>
+    <div id="efecto-monedas"></div>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+          const nombreUsuario = localStorage.getItem("usuarioLogeado");
+          const btnLogin = document.getElementById("btnLogin");
+        
+          if (nombreUsuario && btnLogin) {
+    // Reemplazamos el botón por mensaje de bienvenida + botón salir
+    btnLogin.outerHTML = `
+      <div class="bienvenida-contenedor">
+        <span class="bienvenida">Bienvenido, ${nombreUsuario} 👋</span>
+        <button id="btnLogout" class="btn-login">Cerrar sesión</button>
+      </div>
+    `;
+
+    // Capturamos el botón de cerrar sesión
+    const btnLogout = document.getElementById("btnLogout");
+    btnLogout.addEventListener("click", () => {
+      localStorage.removeItem("usuarioLogeado"); // borra usuario logeado
+      location.reload(); // recarga la página y vuelve a mostrar botón Iniciar Sesión
+    });
+  }
+});
+        </script>
+
+<script>
+// Slider automático + botones de control
+document.addEventListener("DOMContentLoaded", () => {
+  const promos = document.querySelectorAll(".promos .promo");
+  const btnPrev = document.getElementById("promo-prev");
+  const btnNext = document.getElementById("promo-next");
+  let indiceActual = 0;
+
+  function mostrarPromo(indice) {
+    promos.forEach((promo, i) => {
+      promo.style.display = i === indice ? "block" : "none";
+    });
+  }
+
+  // Mostrar la primera promo
+  mostrarPromo(indiceActual);
+
+  // Automático cada 4s
+  let intervalo = setInterval(() => {
+    indiceActual = (indiceActual + 1) % promos.length;
+    mostrarPromo(indiceActual);
+  }, 4000);
+
+  // Botón siguiente
+  btnNext.addEventListener("click", () => {
+    indiceActual = (indiceActual + 1) % promos.length;
+    mostrarPromo(indiceActual);
+    resetIntervalo();
+  });
+
+  // Botón anterior
+  btnPrev.addEventListener("click", () => {
+    indiceActual = (indiceActual - 1 + promos.length) % promos.length;
+    mostrarPromo(indiceActual);
+    resetIntervalo();
+  });
+
+  // Reinicia el intervalo para que no choque con el clic del usuario
+  function resetIntervalo() {
+    clearInterval(intervalo);
+    intervalo = setInterval(() => {
+      indiceActual = (indiceActual + 1) % promos.length;
+      mostrarPromo(indiceActual);
+    }, 4000);
+  }
+});
+</script>
+
+</body>
+</html>
